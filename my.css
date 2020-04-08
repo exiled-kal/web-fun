@@ -1,0 +1,68 @@
+/*CSS reset settings here*/
+
+* {
+    
+    font-family: 'Bubblegum Sans';
+    background-color: #a8ee05;
+    
+}
+#myfone {
+    font-style: italic;
+    color: white;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#box {
+    width: 60%;
+    height:400px;
+    margin: 100px auto;
+    box-shadow: 0 0 3px rgba(0,0,0, .5);
+}
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #263238;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    border:none;
+    border-radius: 10px;
+}
+input:focus {
+    outline: none;
+}
+span {
+    height: 60px;
+    text-align: center;
+    width: 60px;
+    float: right;
+    
+
+}
+#shop {
+    font-size: medium;
+    color:black;
+}
+li {
+
+    height: 60px;
+    line-height: 60px;
+   
+}
+
+}
+#shopping {
+    width:70%;
+    padding-right: 120px;
+
+}
+.list {
+    font-style: italic;
+    color: black;
+} 
+.toggle {
+    background-color: red;
+}

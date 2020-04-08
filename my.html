@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo list</title>
+    <link rel="stylesheet" type="text/css" href="my.css">
+    <link rel="stylesheet" href="
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" >
+</head>
+<script>
+    $('input').keypress(function(event){
+    
+        $(this).val("");
+        $('ul').append('<li>' + todoText + '<span><i class="fa fa-trash"</i></span>');    
+});
+</script>
+<body>
+    <input type="button" id="myfone" value="My Phone">
+    <img src="/Users/admin/Desktop/Myproject/img1_5.png" style="width: 100%; height: 400px;">
+    <div id="box">
+        <input type="text" placeholder="What i have to do today">
+        <audio class ="list" src="just-saying.mp3"></audio>
+        <ul>
+            <p><li class="list">Wake up @ 7 A.M<span><i class="fa fa-trash"></i></span></li></p>
+            <p><li class="list">Make breakfast<span><i class="fa fa-trash"></i></span></li></p>
+            <p><li class="list">Get ready for school<span><i class="fa fa-trash"></i></span></li></p>
+            <p><li class="list">File your tax(tax season)<span><i class="fa fa-trash"></i></span></li></p>
+            <p><li class="list">Laundry<span><i class="fa fa-trash"></i></span></li></p>
+            <p><button id ="shop">Shopping</button><span><i class="fa fa-trash"></i></span></p>
+                
+                            <li class="toggle">milk</li>
+                            <li class="toggle">bread</li>
+                            <li class="toggle">butter</li>
+                            <li class="toggle">Brush</li>
+                            <li class="toggle">Laundry Detergent</li>
+            
+
+    
+    <script type="text/javascript">
+    $('document').ready(function () {
+    $('.fa-trash').click(function () {
+        var audio = $("audio.list")[0];
+        audio.play();
+    });
+});   
+    
+    $('input').keypress(function(event){
+    if(event.which === 10){
+        var notes = $(this).val();
+        $(this).val("");
+        $('ul').append('<li>' + notes + '<span><i class="fa fa-trash"</i></span>');
+    }
+});
+$('ul').on('click', "span" , function(event){
+    $(this).parent().fadeOut(500,function(){
+        $(this).remove();
+    });
+    event.stopPropagation();
+});
+$('ul').on('click', 'li', function(){
+    $(this).toggleClass('done');
+});
+$("#shopping").on('click', "span" , function(event){
+    $(this).parent().fadeOut(500,function(){
+        $(this).remove();
+    });
+    
+});
+$("#shopping").on('click', 'li', function(){
+    $(this).toggleClass('done');
+});
+
+$("#shop").click(function(){
+    $(".toggle").slideToggle();
+})
+
+</script>
+</body>
+</html>
